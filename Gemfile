@@ -6,6 +6,7 @@ ruby '2.6.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.0.4', '>= 6.0.4.1'
 # Use sqlite3 as the database for Active Record
+gem 'iex-ruby-client'
 
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
@@ -25,6 +26,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'rubocop', require: false
 
 gem 'devise'
+gem 'devise-i18n'
+gem 'devise-bootstrap-views', '~> 1.0'
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
