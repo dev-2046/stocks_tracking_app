@@ -15,3 +15,30 @@
 <% end  %>
 <div id="result">
 </div>
+<% if !@stocks.empty? %>
+  <div class="row">
+    <div class="col-9">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Ticker</th>
+            <th scope="col">Name</th>
+            <th scope="col">Last Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @stocks.each_with_index do |stock, i| %>
+            <tr>
+              <th scope="row"><%= i + 1 %></th>
+              <td><%= stock.ticker %></td>
+              <td><%= stock.name %></td>
+              <td><%= stock.last_price %></td>
+              <td><%= link_to "Remove", user_stock_path(stock), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-warning" %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<% end %>
